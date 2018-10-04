@@ -37,6 +37,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 
 @Controller
@@ -89,7 +90,7 @@ String hello(Map<String, Object> model) {
 }
 
 @RequestMapping("/time")
-String hello(Map<String, Object> model) {
+String time(Map<String, Object> model) {
     model.put("time", new Date().toString());
     return "time";
 }
