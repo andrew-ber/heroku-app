@@ -88,6 +88,12 @@ String hello(Map<String, Object> model) {
     return "hello";
 }
 
+@RequestMapping("/time")
+String hello(Map<String, Object> model) {
+    model.put("time", new Date().toString());
+    return "time";
+}
+
   @Bean
   public DataSource dataSource() throws SQLException {
     if (dbUrl == null || dbUrl.isEmpty()) {
